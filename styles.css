@@ -3,10 +3,19 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* font-family: 'Inconsolata', monospace; */
+	font-family: 'Open Sans', sans-serif;
 }
 body{
-	overflow: hidden;
+	/* overflow: hidden; */
+}
+
+div.text-div{
+	width: 85%;
+	margin: 33px auto 15px;
+}
+
+span.text-hid{
+	display: none;
 }
 
 
