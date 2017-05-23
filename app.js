@@ -16,10 +16,29 @@ $(document).on(screen_change_events, () => {
 	
 });
 
+//  /(0+\:)\1*0*/g
 
 
 
+$video.on('timeupdate', (e) => {
+	const time = e.currentTarget.currentTime;
+	console.log(time);
 
+});
+
+let $s = $('.text');
+let $s2 = $('.text-hid');
+// console.log($s);
+console.log($s2[1]);
+$s.each(x => {
+	if ($s[x].textContent.includes('blah')){
+		console.log($s[x+1]);
+	}
+	
+}
+
+
+);
 
 
 
