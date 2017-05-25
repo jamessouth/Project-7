@@ -5,6 +5,7 @@ $('video').mediaelementplayer({
 const $container = $('#mep_0');
 const $video = $('video');
 const $spans = $('.text');
+const $para = $('p');
 
 
 $spans.each(x => {
@@ -17,12 +18,7 @@ $spans.each(x => {
 	$($spans[x]).attr({'data-beg-time': btime, 'data-end-time': etime});
 	$($spans[x]).removeAttr('data-time');
 	
-	
-	
 });
-
-
-
 
 
 $video.addClass('fscreen');
@@ -37,10 +33,6 @@ $(document).on(screen_change_events, () => {
 	
 });
 
-
-
-console.log($spans);
-
 $video.on('timeupdate', (e) => {
 	const time = e.currentTarget.currentTime;
 	$spans.each(x => {
@@ -51,25 +43,15 @@ $video.on('timeupdate', (e) => {
 		} else {
 			$spans[x].style.color = 'black';
 		}
-		
 	});
-	
-	
-	
-	
-	
-	
-	console.log(time);
-
 });
 
 
-
-
-
-
-
-
+$para.on('click', (e) => {
+	if(e.target.tagName === 'SPAN'){
+		$video[0].currentTime = e.target.dataset.begTime;
+	}
+});
 
 
 
