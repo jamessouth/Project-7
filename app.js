@@ -33,8 +33,19 @@ $(document).on(screen_change_events, () => {
 	
 });
 
+const $timeCurrent = $('.mejs__me .mejs__controls .mejs__time-current, .mejs__time-handle-content');
+
+const $controls = $('.mejs__me .mejs__controls');
+
+
 $video.on('timeupdate', (e) => {
 	const time = e.currentTarget.currentTime;
+	
+	
+	let gg = (Math.round((time/$video[0].duration || 0)*100)/100)*360;
+	
+	//console.log(gg);
+	
 	$spans.each(x => {
 		let btime = parseFloat($spans[x].dataset.begTime);
 		let etime = parseFloat($spans[x].dataset.endTime);
@@ -44,7 +55,14 @@ $video.on('timeupdate', (e) => {
 			$spans[x].style.color = 'black';
 		}
 	});
+	
+	
+	$timeCurrent.css('background', `hsla(${gg*20},90%,80%,1)`);
+	$controls.css('background', `hsla(${gg*2},90%,40%,1)`);
 });
+
+
+
 
 
 $para.on('click', (e) => {
@@ -53,12 +71,18 @@ $para.on('click', (e) => {
 	}
 });
 
-const $rail = $('.mejs__time-rail');
-const $timeFloat = $('.mejs__time-float');
-const $tFcenter = $timeFloat.width()/2;
-$rail.on('mousemove mousein', () => {
-	$timeFloat.css('left', '200px');
-	console.log($timeFloat.css('left'));
-	
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
