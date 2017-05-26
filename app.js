@@ -53,7 +53,12 @@ $para.on('click', (e) => {
 	}
 });
 
-
-
-
+const $rail = $('.mejs__time-rail');
+const $timeFloat = $('.mejs__time-float');
+const $tFcenter = $timeFloat.width()/2;
+$rail.on('mousemove mousein', () => {
+	$timeFloat.css('left', '200px');
+	console.log($timeFloat.css('left'));
+	
+});
 
