@@ -20,39 +20,6 @@ div.text-div{
 	background-color: red;
 }
 
-.mejs__me .mejs__time-float{
-	display: block;
-	background: none;
-	width: 40%;
-	height: 56px;
-	border: none;
-	top: -179px;
-	margin-left: 0;
-	left: 100px;
-}
-
-.mejs__me .mejs__time-float-current{
-	margin: 0;
-	
-	height: 50%;
-	
-	
-	font-size: 56px;
-	line-height: 46px;
-	color: rgba(255,255,255,0.5);
-
-}
-
-.mejs__me .mejs__time-float-corner{
-	display: none;
-}
-
-
-
-
-
-
-
 
 
 
@@ -69,6 +36,13 @@ div.text-div{
 		margin: 28px auto;
 		
 	}
+	
+	div.text-div{
+		max-width: 725px;
+		line-height: 2;
+		/* margin: 33px auto 15px; */
+	}
+
 }
 
 
