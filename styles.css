@@ -5,44 +5,30 @@
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 }
-body{
-	/* overflow: hidden; */
-}
 
 div.text-div{
 	width: 85%;
 	margin: 33px auto 15px;
 }
 
-
-
 .mejs__me .mejs__controls{
 	background-color: red;
 }
-
-
-
-
 
 @media screen and (min-width: 768px){
 	
 	.fscreen{
 		max-width: 725px;
 		max-height: 408px;
-		
 	}
 	
 	.fscreen-vid{
 		margin: 28px auto;
-		
 	}
 	
 	div.text-div{
 		max-width: 725px;
 		line-height: 2;
-		/* margin: 33px auto 15px; */
+		margin: 33px auto 30px;
 	}
-
 }
-
-
